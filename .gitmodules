@@ -1,0 +1,6 @@
+[submodule "ImageBot/data_aquisition/arduinoserialirqcom"]
+	path = ImageBot/data_aquisition/arduinoserialirqcom
+	url = ../arduinoserialirqcom.git
+[submodule "yolov5"]
+	path = yolov5
+	url = https://github.com/ultralytics/yolov5.git
