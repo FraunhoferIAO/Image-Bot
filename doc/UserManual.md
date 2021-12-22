@@ -55,7 +55,7 @@ In the "0. Setup"-Step you are required to set the serial port for communication
 
 ## 5. Close the Image-Bot
 
-In your "ImageBot.ipynb" in the browser click on *File > Close and Halt*, when you are done. Close the Browser Tab or Window in which the Image-Bot was shown. Return to your (anaconda) terminal. Hit Ctrl+C here to stop the Image-Bot. Afterwards type:
+In your "ImageBot.ipynb" in the browser click on *File > Close and Halt* or *File > Shutdown*, when you are done. Close the Browser Tab or Window in which the Image-Bot was shown. Return to your (anaconda) terminal. Hit Ctrl+C here to stop the Image-Bot. Afterwards type:
 
 ```
 conda deactivate
