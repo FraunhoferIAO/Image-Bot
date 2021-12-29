@@ -49,6 +49,8 @@ Open your (anaconda) terminal in the new "image-bot" folder and install the requ
 conda env create -f environment.yaml
 ```
 
+If you experience any errors under Ubuntu in the previous step, please change to the hotfix/environment branch. We are currently resolving the issue.
+
 To use the environment, activate it with the command
 
 ```
