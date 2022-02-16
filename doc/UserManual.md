@@ -1,22 +1,23 @@
 # User Manual of the Image-Bot
 
-[Go back to main page ](../README.md)
+[Go back to main page](../README.md)
 
 ## 1. Start the Image-Bot
 
-Go to the main "image-bot" folder. Open a (anaconda) terminal here and type:
+Go to the main "image-bot" folder. Open a (global) terminal and type:
 
-```
-conda activate image-bot
+```(bash)
 jupyter lab
 ```
 
 Your browser should open and display something similiar to the following image:
 
-![Jupyter Lab](Installation_JupyterMarked.png)
+![Jupyter Lab](images/Installation_JupyterMarked.png)
 
-Double click on "ImageBot.ipynb". The Image-Bot is now ready to be used! Just follow the instructions on screen and/or continue reading this manual.
+Double click on "ImageBot.ipynb".  
+Now, select the right kernel (image-bot-kernel) in the upper-right corner.
 
+The Image-Bot is now ready to be used! Just follow the instructions on screen and/or continue reading this manual.
 
 ## 2. Overview of the Image-Bot steps
 
@@ -36,13 +37,13 @@ The results of each step are stored in the "output" folder.
 
 After opening "ImageBot.ipynb" in your browser, you should see somthing similiar to the following picture.
 
-![View on the Image-Bot when first opening the ImageBot.ipynb](ImageBotRunning001.png)
+![View on the Image-Bot when first opening the ImageBot.ipynb](images/ImageBotRunning001.png)
 
 Each step in the Image-Bot consists of an introduction an then a cell to run the step. After reading everything which is written in the step's introduction (in this case everything underneath "0. Setup"), scroll down, until you see a code block.
 
 If necessary, change something in the code block; the step's introduction will tell you so, if it is necessary. Afterwards, let the code block run, by clicking in the code block and then on the "Play" icon in the main menu bar.
 
-![View on the Image-Bot when first opening the ImageBot.ipynb](ImageBotRunning002_marked.png)
+![View on the Image-Bot when first opening the ImageBot.ipynb](images/ImageBotRunning002_marked.png)
 
 The step's progress and output is displayed underneath the code block. After the code block is fully processed you can proceed with the next step.
 
@@ -55,18 +56,10 @@ In the "0. Setup"-Step you are required to set the serial port for communication
 
 ## 5. Close the Image-Bot
 
-In your "ImageBot.ipynb" in the browser click on *File > Close and Halt* or *File > Shutdown*, when you are done. Close the Browser Tab or Window in which the Image-Bot was shown. Return to your (anaconda) terminal. Hit Ctrl+C here to stop the Image-Bot. Afterwards type:
-
-```
-conda deactivate
-```
+In your "ImageBot.ipynb" in the browser click on *File > Close and Halt* or *File > Shutdown*, when you are done. Close the Browser Tab or Window in which the Image-Bot was shown. Return to your (global) terminal. Hit Ctrl+C here to stop the Image-Bot.
 
 Then close the terminal.
 
 ## Fine Tuning the Image-Bot
 
 You can already set the most important parameters for the Image-Bot in the "ImageBot.ipynb" in your browser. However, if you want to fine tune the algorithms, e.g. because you have a hard to capture image, have a look at the Config file in ImageBot/Config.py.
-
-
-
-
