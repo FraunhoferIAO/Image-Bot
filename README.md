@@ -2,21 +2,21 @@
 
 A low-cost, low-effort setup to generate large synthetic dataset for object recognition and image segmentation from real-world objects
 
-&nbsp; 
+&nbsp;  
 
-![](doc/ImageBotSetup.png)
+![ImageBot-Setup](doc/images/ImageBotSetup.png)
 
-&nbsp; 
+&nbsp;  
 
 This repository contains the source code for the Image-Bot. The Image-Bot is low-cost, low-effort physical setup and software pipeline to generate large synthetic dataset for object recognition and image segmentation from real-world objects. It uses a common technique from the movie industry: Pictures of objects are taken in front of a green screen from different perspectives. The green parts of the pictures are removed (so-called chroma keying) and the objects are inserted into random backgrounds to generate the dataset. Labeling happens automatically through the object's mask.
 
-&nbsp; 
+&nbsp;  
 
-![](doc/BasicFunctionality.png)
+![Basic Functionality](doc/images/BasicFunctionality.png)
 
 *Background image from [COCO 2017 dataset](https://cocodataset.org/)*
 
-&nbsp; 
+&nbsp;  
 
 Core idea of the Image-Bot is to enable small and medium-sized companies to use machine learning approaches. It should support them in building their own training datasets. Training datasets for image recognition are often poorly available for small and medium-sized manufacturing companies, due to the highly specialized products they work with, and the disproportionate investment to generate their own ones. The Image-Bot creates a dataset of about 1,500 to 3,000 labeled training images in under 45 min from real-world objects while using affordable hardware (total cost less than 500 €).
 
@@ -39,7 +39,7 @@ We do not receive any compensation from the vendors of the components used in th
 
 If you only want to test the Image-Bot without setting up any hardware, please have a look at our datasets. They provide you with some exemplary images, captured with our Image-Bot setup.
 
-* Everyday/Industrial Objects: https://doi.org/10.17632/4nn2w8rvx3.1
+* [Everyday/Industrial Objects](https://doi.org/10.17632/4nn2w8rvx3.1)
 * *More datasets will follow soon...*
 
 You can process these datasets further with the Image-Bot's software pipeline.
@@ -68,14 +68,13 @@ Distributed under MIT license. See `LICENSE` for more information.
 
 ## Contact & Maintainer
 
-- Lukas Block - [lukas.block(a)iat.uni-stuttgart.de]()
-- Adrian Raiser - [adrian.raiser(a)iao.fraunhofer.de]()
+* Lukas Block - <lukas.block@iat.uni-stuttgart.de>
+* Adrian Raiser - <adrian.raiser@iao.fraunhofer.de>
 
 ## Project
 
-* Image-Bot on github: https://github.com/MobilityInnovation/Image-Bot
-* Morphoa-Project: https://www.photonikforschung.de/projekte/open-innovation/projekt/morphoa.html
-
+* Image-Bot on Github: <https://github.com/MobilityInnovation/Image-Bot>
+* Morphoa-Project: <https://www.photonikforschung.de/projekte/open-innovation/projekt/morphoa.html>
 
 ## Acknowledgements
 
@@ -83,13 +82,11 @@ The Image-Bot is part of the research project Morphoa, funded by the German Fede
 
 ## Next steps
 
-- Fix minor bugs and clean up code
-- Enhance useability
-- Write installation scripts for Windows and Ubuntu
-- Put it in a docker container
-- Extend for 3D images
-- Fully automate the process
-- Populate init-files of the subpackages?
-- Add the Poisson editing and ImgAug as a real submodule
-
-
+* Fix minor bugs and clean up code
+* Enhance useability
+* Write installation scripts for Windows and Ubuntu
+* Put it in a docker container
+* Extend for 3D images
+* Fully automate the process
+* Populate init-files of the subpackages?
+* Add the Poisson editing and ImgAug as a real submodule
