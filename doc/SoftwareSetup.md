@@ -1,65 +1,99 @@
 # Software Setup for the Image-Bot
 
-[Go back to main page ](../README.md)
+[Go back to main page](../README.md)
 
-Please note: We are currently working on an installation procedure which does not rely on git nor conda. However, until now we require you explicitly to use git and conda.
-If you are not familiar with git, please look for a tutorial (e.g. [here](https://www.computerhope.com/issues/ch001927.htm) for windows or [here](https://www.linux.com/topic/desktop/introduction-using-git/) for linux).
-If you are not familiar with conda, feel free to look for a tutorial. However, the steps with conda are also explained in detail in the following. Thus, deep knowledge of conda ist not necessary.
+> We are currently working on an installation procedure which does not rely on git. However, until now we require you explicitly to use git.
+> If you are not familiar with git, please look for a tutorial (e.g. [here](https://www.computerhope.com/issues/ch001927.htm) for windows or [here](https://www.linux.com/topic/desktop/introduction-using-git/) for linux).  
+>  
+> In this file, different terminal "types" are referenced: git, env and global. They refer to their scope in the project.  
+> On Linux, the default bash terminal can be used for any type.  
+> On Windows, it is possible to choose between Git Bash (recommended) and Powershell.
 
-## 0. Install git and conda (if not already present)
+## 0. Install python and git (if not already present)
 
-For the Image-Bot to work, you will need git and conda.
+For the Image-Bot to work, you will need python and git.
 
-Please download and install git and conda (e.g. from the links below):
+Please download and install python and git (e.g. from the links below):
 
-* Anaconda: https://docs.anaconda.com/anaconda/install/
-* Git for windows: https://git-scm.com/download/win
-* Git for linux is most likely delivered with your distribution
+* Python:  
+  Windows: [https://www.python.org/downloads/](https://www.python.org/downloads/)  
+  Linux: Use your package-manager to install python (eg. ```sudo apt install python``` on Ubuntu)
 
-Please note that the Image-Bot is mainly build in python. As such, you will also need a python environment. Python is normally installed with and managed by Anaconda. As such, no further steps are required.
+  Select a version to install. Python 3.8 is recommended, but newer versions should be compatible.
 
-## 1. Clone the repository and initiliaze the submodules
+* Git:  
+  Windows: [https://git-scm.com/download/win](https://git-scm.com/download/win)  
+  Git for Linux is most likely
+
+## 1. Clone the repository and initialize submodules
 
 Go to the folder where you want to install the Image-Bot. Open your (git) terminal and type:
 
-```
+```(bash)
 git clone https://github.com/MobilityInnovation/Image-Bot
 ```
 
 Enter the newly created folder, which contains the Image-Bot's software pipeline:
 
-```
-cd image-bot
+```(bash)
+cd Image-Bot
 ```
 
 Initiliaze and clone the submodules:
 
-```
+```(bash)
 git submodule init
 git submodule update
 ```
 
 Close your (git) terminal. We are done with git.
 
-## 2. Install and activate conda environment
+## 2. Install and activate virtual environment
 
-Open your (anaconda) terminal in the new "image-bot" folder and install the required conda environment from the supplied file:
+Open your (env) terminal in the new "image-bot" folder and create a virtual environment:
 
-```
-conda env create -f environment.yaml
-```
-
-If you experience any errors under Ubuntu in the previous step, please change to the hotfix/environment branch. We are currently resolving the issue.
-
-To use the environment, activate it with the command
-
-```
-conda activate image-bot
-ipython kernel install --user --name=image-bot-kernel
-conda deactivate
+```(bash)
+python -m venv .venv
 ```
 
-Close your (anaconda) terminal. We are done with anaconda.
+This creates a new folder called .venv containing the virtual environment.  
+Activate the virtual environment:
+
+```(bash)
+# Windows Powershell
+./.venv/Scripts/activate.ps1
+
+# Windows Git Bash
+source ./.venv/Scripts/activate
+
+# Linux, Git Bash
+source ./.venv/bin/activate
+
+# Deactivate virtual environment
+deactivate
+```
+
+Open your (env) terminal in the new "Image-Bot" folder and install the required dependencies:
+
+```(bash)
+python -m pip install -r requirements.txt
+```
+
+The ImageBot is now ready to use with conventional python files (placed in this repos root). To enable Jupyter support, follow these steps:
+
+1. Using (global or env) terminal, install jupyter
+
+    ```(bash)
+    python -m pip install jupyterlab
+    ```
+
+2. Using (env) terminal, install the ipykernel and register it
+
+    ```(bash)
+    ipython kernel install --user --name=image-bot-kernel
+    ```
+
+Close your (env) terminal. We are done with it.
 
 ## 3. Fill the background images folder
 
